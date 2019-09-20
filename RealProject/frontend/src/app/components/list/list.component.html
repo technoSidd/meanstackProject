@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+      <div class="row">
+          <div class="col-md-10">
+              <h2><i class="fa fa-users"></i> All projects</h2>
+          </div>
+          <div class="col-md-2">
+              <button class="btn btn-primary" routerLink="/create">Create New Issue</button>
+          </div>
+      </div>
+  </div>
+  <div class="card-body">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Title</th>
+                  <th>Responsible</th>
+                  <th>Description</th>
+                  <th>Severity</th>
+                  <th>Status</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of issueArr">
+                  <td>{{item.title}}</td>
+                  <td>{{item.responsible}}</td>
+                  <td>{{item.description}}</td>
+                  <td>{{item.severity}}</td>
+                  <td>{{item.status}}</td>
+                  <td>https://codingthesmartway.com/mean-stack-crash-course/</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
